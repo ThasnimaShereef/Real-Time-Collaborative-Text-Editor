@@ -1,46 +1,104 @@
-# Getting Started with Create React App
+# 📝 Real-Time Collaborative Text Editor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web-based **real-time collaborative text editor** built using **React**, **TipTap**, **Yjs**, and **WebRTC**. Multiple users can edit a shared document simultaneously and see each other's cursors and names live.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+* 🧑‍🤝‍🧑 Real-time collaboration with multiple users
+* ✍️ Rich text editing powered by [TipTap](https://tiptap.dev/)
+* 🌐 Peer-to-peer communication using [Yjs](https://yjs.dev/) and [y-webrtc](https://github.com/yjs/y-webrtc)
+* 👤 User identification with color-coded cursors
+* 🧠 Awareness of online users
+* ⚡ Fast and serverless (no backend needed!)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 📸 Preview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![screenshot](./screenshot.png) 
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tech Stack
 
-### `npm run build`
+* **React** — UI framework
+* **TipTap** — Headless rich text editor
+* **Yjs** — CRDT-based collaboration framework
+* **y-webrtc** — WebRTC provider for Yjs
+* **TypeScript / JavaScript**
+* **CSS** — Basic styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Installation & Running Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+* npm or yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Steps
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   git clone https://github.com/your-username/real-time-editor.git
+   cd realtime-editor
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Install dependencies:**
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   or
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   yarn install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm start
+   ```
+
+   or
+
+   ```bash
+   yarn start
+   ```
+
+4. **Open in browser:**
+
+   Navigate to `http://localhost:3000` in your browser.
+
+5. **Try it out with others:**
+
+   * Open the app in multiple browser tabs or devices.
+   * Enter different usernames to see real-time editing and cursor presence.
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── App.css           # Styling for editor and user UI
+├── App.tsx / App.jsx # Main app component
+├── index.tsx         # Entry point
+└── ...
+```
+
+---
+
+## 🧠 How It Works
+
+* When a user joins, a **Yjs document (`Y.Doc`)** is created and synced with others via **WebRTC** using `y-webrtc`.
+* **TipTap** is initialized with:
+
+  * `Collaboration`: syncs document content.
+  * `CollaborationCursor`: shows real-time cursor positions with user names and colors.
+* The **awareness protocol** tracks connected users and updates the sidebar with their names and colors.
+
+---

@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,130 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* New styles for real-time editor */
+
+.editor-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  border-right: 1px solid #333;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-color-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.editor-main {
+  flex-grow: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow: hidden
+}
+
+.editor-header {
+  margin-top: 0;
+}
+
+.editor-user {
+  margin-bottom: 10px;
+}
+
+.user-color {
+  font-weight: bold;
+}
+
+.editor-area {
+  flex-grow: 1;
+  height: 100%;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+  position: relative;
+  overflow-y: auto;
+  min-height: 300px;
+  max-height: calc(100vh - 150px);
+}
+
+/* Fix Quill tooltip position and visibility */
+.ql-tooltip {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000 !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+  
+.username-form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+}
+
+.username-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.username-form label {
+  margin-bottom: 8px;
+}
+
+.username-input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: none;
+}
+
+.username-button {
+  padding: 10px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.username-button:hover {
+  background-color: #3700b3;
 }
