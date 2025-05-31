@@ -2,6 +2,8 @@
 
 This is a web-based **real-time collaborative text editor** built using **React**, **TipTap**, **Yjs**, and **WebRTC**. Multiple users can edit a shared document simultaneously and see each other's cursors and names live.
 
+## Live Link : https://thasnima-shereef-wasserstoff-front-iota.vercel.app/
+
 ## 🚀 Features
 
 * 🧑‍🤝‍🧑 Real-time collaboration with multiple users
