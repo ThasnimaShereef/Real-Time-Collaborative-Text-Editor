@@ -15,12 +15,6 @@ This is a web-based **real-time collaborative text editor** built using **React*
 
 ---
 
-## 📸 Preview
-
-![screenshot](./screenshot.png) 
-
----
-
 ## 🛠️ Tech Stack
 
 * **React** — UI framework
