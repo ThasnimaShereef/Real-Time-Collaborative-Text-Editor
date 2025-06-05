@@ -4,6 +4,13 @@ This is a web-based **real-time collaborative text editor** built using **React*
 
 ## Live Link : https://thasnima-shereef-wasserstoff-front-iota.vercel.app/
 
+---
+
+## 📸 Preview
+
+![Website Preview](./editor.png) <!-- Optional: Add a preview GIF or another screenshot -->
+
+---
 ## 🚀 Features
 
 * 🧑‍🤝‍🧑 Real-time collaboration with multiple users
